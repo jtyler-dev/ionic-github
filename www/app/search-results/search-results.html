@@ -1,0 +1,48 @@
+<ion-view view-title="Profile">
+  <ion-content>
+      <div id="searchResults" class="content">
+          <div class="userProfile row">
+              <div class="userAvatar col-3">
+                  <img src={{userObj.userAvatar}} >
+              </div>
+              <div class="userInfo col">
+                  <div class="userName">
+                      {{userObj.userName}}
+                  </div>
+                  <div class="userCompany">
+                      <span class="bold">Company: </span>{{userObj.userCompany}}
+                  </div>
+                  <div class="userEmail">
+                      <span class="bold">Email: </span>{{userObj.userEmail}}
+                  </div>
+                  <div class="userLocation">
+                      <span class="bold">Location: </span>{{userObj.userLocation}}
+                  </div>
+                  <div class="userBlog">
+                      <div ng-if="userObj.userBlog !== 'N/A'">
+                          <span class="bold">Website: </span> <a href={{userObj.userBlog}}>{{userObj.userBlog}}</a>
+                      </div>
+                      <div ng-if="userObj.userBlog === 'N/A'">
+                          <span class="bold">Website: </span>{{userObj.userBlog}}
+
+                      </div>
+                  </div>
+
+            </div>
+          </div>
+          <div class="row publicRepoTitle">
+              Public Repositories
+          </div>
+          <div class="userRepos list">
+              <a ng-repeat="repo in userObj.publicRepos" href="{{repo.html_url}}" class="item item-text-wrap">
+                  <div class="repoName">
+                      {{repo.name}}
+                  </div>
+                  <div class="repoDescription">
+                      {{repo.description}}
+                  </div>
+              </a>
+          </div>
+    </div>
+  </ion-content>
+</ion-view>

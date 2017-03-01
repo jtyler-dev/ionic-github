@@ -1,0 +1,28 @@
+#searchResults {
+    .userAvatar {
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .publicRepoTitle {
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .repoName {
+        font-weight: bold;
+        font-size: 18px
+    }
+
+    .repoDescription {
+        font-size: 12px;
+    }
+}
